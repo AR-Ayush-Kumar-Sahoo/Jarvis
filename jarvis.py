@@ -116,16 +116,16 @@ def tasks():
             speak("Updating to the latest version...")
             speak("It might take a couple of minutes to update.")
 
-            time.sleep(10)
+            # time.sleep(10)
             speak("Removing the older version from the system...")
 
-            time.sleep(10)
+            # time.sleep(10)
 
             speak("Installing the latest version...")
-            time.sleep(10)
+            # time.sleep(10)
 
             speak("Restarting Jarvis...")
-            time.sleep(2)
+            # time.sleep(2)
 
             os.system('cls')
             os.system('jarvis.py')
@@ -577,8 +577,12 @@ def tasks():
 
                     image = cv2.imread(pictureChoosed)
                     res = cv2.stylization(image, sigma_s=60, sigma_r=0.6)
+                    cv2.waitKey(0)
+
                     cv2.imshow("Original", image)
                     cv2.imshow("Effect Added", res)
+                    cv2.waitKey(0)
+
                     break
 
                 elif "no" in reply:
@@ -588,6 +592,8 @@ def tasks():
                 else:
                     speak("Say that again please")
                     continue
+        else:
+            continue
 
 
 tasks()
