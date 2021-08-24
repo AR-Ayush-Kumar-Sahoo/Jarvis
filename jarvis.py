@@ -45,6 +45,7 @@ def take_command():
 
     except sr.RequestError:
         speak(request_error)
+        exit()
 
     except KeyboardInterrupt:
         speak(exit_message)
@@ -302,7 +303,7 @@ def tasks():
         elif "open google maps" in query:
             openWebsite('https://www.maps.google.com', 'Google Maps')
 
-        elif "open google play" in query or "open play store":
+        elif "open google play" in query or "open play store" in query:
             openWebsite('https://play.google.com', 'Google Play')
 
         elif "open google docs" in query:
