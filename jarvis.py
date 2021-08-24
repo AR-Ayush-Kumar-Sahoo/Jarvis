@@ -1,4 +1,3 @@
-from fileinput import close
 import webbrowser
 import pyttsx3
 import speech_recognition as sr
@@ -9,6 +8,7 @@ import os
 import windowsapps
 import random
 import cv2
+import speedtest
 
 engine = pyttsx3.init('sapi5')
 voices = engine.getProperty("voices")
@@ -342,7 +342,6 @@ def tasks():
             pyautogui.press('volumemute')
 
         elif "internet speed" in query:
-            import speedtest
 
             speak("Performing an internet speed test.")
             speak("It might take some time so please wait.")
