@@ -116,16 +116,16 @@ def tasks():
             speak("Updating to the latest version...")
             speak("It might take a couple of minutes to update.")
 
-            # time.sleep(10)
+            time.sleep(10)
             speak("Removing the older version from the system...")
 
-            # time.sleep(10)
+            time.sleep(10)
 
             speak("Installing the latest version...")
-            # time.sleep(10)
+            time.sleep(10)
 
             speak("Restarting Jarvis...")
-            # time.sleep(2)
+            time.sleep(2)
 
             os.system('cls')
             os.system('jarvis.py')
@@ -592,6 +592,7 @@ def tasks():
                 else:
                     speak("Say that again please")
                     continue
+
         else:
             continue
 
