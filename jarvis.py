@@ -100,7 +100,7 @@ def openWebsite(url, name):
 
 
 def tasks():
-    os.system('cls')
+    os.system('clear')
 
     wish()
 
@@ -109,7 +109,7 @@ def tasks():
 
         if "exit" in query or "quit" in query:
             speak(exit_message)
-            os.system('cls')
+            os.system('clear')
             exit()
 
         elif "update" in query:
@@ -127,7 +127,7 @@ def tasks():
             speak("Restarting Jarvis...")
             time.sleep(2)
 
-            os.system('cls')
+            os.system('clear')
             os.system('jarvis.py')
             exit()
 
@@ -287,6 +287,9 @@ def tasks():
 
         # Opening Websites
 
+        elif "open google meet" in query or "open meet" in query:
+            openWebsite('https://meet.google.com', 'Google Meet')
+
         elif "open google" in query:
             openWebsite('https://google.com', 'Google')
 
@@ -295,6 +298,21 @@ def tasks():
 
         elif "open gmail" in query:
             openWebsite('https://mail.google.com', 'Gmail')
+
+        elif "open google maps" in query:
+            openWebsite('https://www.maps.google.com', 'Google Maps')
+
+        elif "open google play" in query or "open play store":
+            openWebsite('https://play.google.com', 'Google Play')
+
+        elif "open google docs" in query:
+            openWebsite('https://docs.google.com', 'Google Docs')
+
+        elif "open google forms" in query:
+            openWebsite('https://forms.google.com', 'Google Forms')
+
+        elif "open google drive" in query:
+            openWebsite('https://drive.google.com', 'Google Drive')
 
         # Other Commands
 
@@ -592,6 +610,11 @@ def tasks():
                 else:
                     speak("Say that again please")
                     continue
+
+        # User Interactions
+
+        elif "thank you" in query or "thanks" in query:
+            speak("Its my pleasure to help you out sir.")
 
         else:
             continue
