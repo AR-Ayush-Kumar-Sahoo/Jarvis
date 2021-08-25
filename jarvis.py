@@ -95,13 +95,13 @@ def closeApp(appName, taskmgrName):
 
 
 def openWebsite(url, name):
-    speak(f"Opening {name}")
+    speak(f"Opening {name}...")
     webbrowser.open_new_tab(url)
     speak(completed_task_msg)
 
 
 def tasks():
-    os.system('clear')
+    os.system('cls')
 
     wish()
 
@@ -110,7 +110,7 @@ def tasks():
 
         if "exit" in query or "quit" in query:
             speak(exit_message)
-            os.system('clear')
+            os.system('cls')
             exit()
 
         elif "update" in query:
@@ -128,8 +128,8 @@ def tasks():
             speak("Restarting Jarvis...")
             time.sleep(2)
 
-            os.system('clear')
-            os.system('jarvis.py')
+            os.system('cls')
+            os.system('python jarvis.py')
             exit()
 
         elif "sleep" in query:
@@ -234,6 +234,10 @@ def tasks():
             openApp('Paint 3D')
             speak(completed_task_msg)
 
+        elif "open paint" in query:
+            openApp('Paint')
+            speak(completed_task_msg)
+
         elif "open photos" in query or "open photo" in query:
             openApp('Photos')
             speak(completed_task_msg)
@@ -288,18 +292,6 @@ def tasks():
 
         # Opening Websites
 
-        elif "open google meet" in query or "open meet" in query:
-            openWebsite('https://meet.google.com', 'Google Meet')
-
-        elif "open google" in query:
-            openWebsite('https://google.com', 'Google')
-
-        elif "open youtube" in query:
-            openWebsite('https://youtube.com', 'Youtube')
-
-        elif "open gmail" in query:
-            openWebsite('https://mail.google.com', 'Gmail')
-
         elif "open google maps" in query:
             openWebsite('https://www.maps.google.com', 'Google Maps')
 
@@ -314,6 +306,18 @@ def tasks():
 
         elif "open google drive" in query:
             openWebsite('https://drive.google.com', 'Google Drive')
+
+        elif "open google meet" in query or "open meet" in query:
+            openWebsite('https://meet.google.com', 'Google Meet')
+
+        elif "open google" in query:
+            openWebsite('https://google.com', 'Google')
+
+        elif "open youtube" in query:
+            openWebsite('https://youtube.com', 'Youtube')
+
+        elif "open gmail" in query:
+            openWebsite('https://mail.google.com', 'Gmail')
 
         # Other Commands
 
@@ -504,7 +508,7 @@ def tasks():
                     searchQuery = take_command()
 
                     webbrowser.open_new_tab('https://www.google.com')
-                    time.sleep(1.5)
+                    time.sleep(3)
 
                     pyautogui.write(searchQuery, interval=0.025)
                     pyautogui.press('enter')
