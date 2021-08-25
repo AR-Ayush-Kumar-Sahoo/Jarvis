@@ -17,6 +17,7 @@ Jarvis is like google assistant it basically helps you out to automate almost ev
 -   Take Screenshots of specific parts of your screen
 -   Handle the System
 -   Automatically type what you say
+-   Write Pretty long essays
 -   Much More...
 
 ---
