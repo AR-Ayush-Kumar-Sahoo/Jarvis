@@ -23,7 +23,7 @@ Jarvis is like google assistant it basically helps you out to automate almost ev
 
 <div style="margin-top: 25px;"></div>
 
-## Aim of My Project
+## Aim of this Project
 
 The Aim of my project is to automate almost anything of a computer.
 
@@ -275,6 +275,6 @@ Name: AR Ayush Kumar Sahoo
 
 School: Odisha Adarsha Vidyalaya [OAV](https://www.oav.edu.in) Chanchra Pada
 
-Std: VII
+Class: VII
 
 </div>
